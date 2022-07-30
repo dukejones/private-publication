@@ -136,7 +136,7 @@ export default () =>
           zome_name: "private_publication_lobby",
         });
         if (isExercise && stepNum === 3) return;
-
+        
         await bob.appWs().callZome({
           cap_secret: null,
           cell_id: [lobbyDnaHash, bobPubKey],
@@ -158,7 +158,6 @@ export default () =>
         t.equal(allPosts.length, 1);
 
         if (isExercise && stepNum === 5) return;
-
       });
     } catch (e) {
       console.log(e);
